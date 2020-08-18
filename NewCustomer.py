@@ -1,0 +1,76 @@
+import tkinter as tk
+
+def getInput():
+    a = e1.get()
+    b = e2.get()
+    c = e2.get()
+    d = e3.get()
+    e = e4.get()
+    g = e5.get()
+    h = e6.get()
+    j = e7.get()
+    k = (" ")
+    aa = ("\n")
+    f = open('results.csv','a')
+    f.write(a)
+    f.write(k)
+    f.write(b)
+    f.write(k)
+    #f.write(c)
+    #f.write(k)
+    f.write(d)
+    f.write(k)
+    f.write(e)
+    f.write(k)
+    f.write(g)
+    f.write(k)
+    f.write(h)
+    #f.write(k)
+    #f.write(j)
+    f.write(aa)
+    f.close()
+    e1.delete(0, 255)
+    e2.delete(0, 255)
+    e3.delete(0, 255)
+    e4.delete(0, 255)
+    e5.delete(0, 255)
+    e6.delete(0, 255)
+    e7.delete(0, 255)
+
+
+def close_window ():
+    master.destroy()
+
+master = tk.Tk()
+master.title('New Customer')
+tk.Label(master, text="First Name").grid(row=0)
+tk.Label(master, text="Last Name").grid(row=1)
+
+tk.Label(master, text="E-mail Address").grid(row=6)
+tk.Label(master, text="Address").grid(row=3)
+
+
+tk.Label(master, text="Birthday").grid(row=4)
+tk.Label(master, text="Phone Number").grid(row=5)
+
+b1 = tk.Button(text='Submit', command = getInput).grid(row=9, column=1)
+b2 = tk.Button(text='Close', command = close_window).grid(row=9, column=2)
+
+e1 = tk.Entry(master)
+e2 = tk.Entry(master)
+e3 = tk.Entry(master)
+e4 = tk.Entry(master)
+e5 = tk.Entry(master)
+e6 = tk.Entry(master)
+e7 = tk.Entry(master)
+e8 = tk.Entry(master)
+
+e1.grid(row=0, column=1)
+e2.grid(row=1, column=1)
+e3.grid(row=2, column=1)
+e3.grid(row=3, column=1)
+e4.grid(row=4, column=1)
+e5.grid(row=5, column=1)
+e6.grid(row=6, column=1)
+
+master.mainloop()
